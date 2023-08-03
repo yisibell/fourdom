@@ -1,6 +1,6 @@
 {
   "name": "fordom",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A DOM toolkit library",
   "type": "module",
   "main": "./lib/fordom.cjs",
