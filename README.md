@@ -14,13 +14,13 @@ A DOM toolkit library.
 
 ```bash
 # pnpm
-$ pnpm add fordom
+$ pnpm add fourdom
 
 # yarn
-$ yarn add fordom
+$ yarn add fourdom
 
 # npm
-$ npm i fordom
+$ npm i fourdom
 ```
 # APIs
 
