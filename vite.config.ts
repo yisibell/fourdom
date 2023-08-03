@@ -11,7 +11,7 @@ const outDir = isBuildLib() ? 'lib' : 'dist'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/fordom/',
+  base: '/fourdom/',
   plugins: [vue()],
   resolve: {
     alias: {
@@ -25,9 +25,9 @@ export default defineConfig({
         lib: {
           // Could also be a dictionary or array of multiple entry points
           entry: resolve(__dirname, 'src/lib/main.ts'),
-          name: 'Fordom',
+          name: 'Fourdom',
           // the proper extensions will be added
-          fileName: 'fordom',
+          fileName: 'fourdom',
           formats: ['es', 'cjs', 'umd'],
         },
         // rollupOptions: {
