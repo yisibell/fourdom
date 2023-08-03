@@ -1,14 +1,14 @@
-# fordom
+# fourdom
 
 A DOM toolkit library.
 
 # Features
 
-- `css` for add **style** to DOM.
-- `removeElement` for delete a **Element** from DOM.
-- `addClss` for add some **class name** to DOM.
-- `removeClass` for delete some **class name** from DOM.
-- `hasClass` for determine whether **class name** exists on a certain DOM.
+- `css`: for add **style** to DOM.
+- `removeElement`: for delete a **Element** from DOM.
+- `addClss`: for add some **class name** to DOM.
+- `removeClass`: for delete some **class name** from DOM.
+- `hasClass`: for determine whether **class name** exists on a certain DOM.
 
 # Installation
 
