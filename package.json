@@ -1,11 +1,29 @@
 {
   "name": "fordom",
   "version": "1.0.0",
-  "description": "A DOM library",
+  "description": "A DOM toolkit library",
   "type": "module",
+  "main": "./lib/fordom.cjs",
+  "module": "./lib/fordom.js",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/fordom.js",
+      "require": "./lib/fordom.cjs",
+      "types": "./lib/index.d.ts"
+    }
+  },
   "keywords": [
-    "dom"
+    "dom",
+    "toolkit"
   ],
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "url": "https://github.com/yisibell/fordom"
+  },
+  "homepage": "https://github.com/yisibell/fordom",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
@@ -14,7 +32,11 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "release": "npm run build:lib && npm run build:type && changelogen --release && npm publish --access=public && git push --follow-tags",
+    "build:app": "cross-env BUILD_TYPE=app vite build",
+    "build:lib": "cross-env BUILD_TYPE=lib vite build",
+    "build:type": "rollup -c"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.2.0",
@@ -26,6 +48,7 @@
     "@vue/test-utils": "^2.3.0",
     "@vue/tsconfig": "^0.1.3",
     "changelogen": "^0.5.4",
+    "cross-env": "^7.0.3",
     "eslint": "^8.34.0",
     "eslint-plugin-vue": "^9.9.0",
     "jsdom": "^21.1.0",
